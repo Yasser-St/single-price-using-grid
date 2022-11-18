@@ -1,0 +1,225 @@
+:root{
+    /*  Color  */
+    --Cyan         : hsl(179, 93%, 33%);
+    --Light-Cyan   : hsl(179, 62%, 43%);
+    --Bright-Yello : hsl(71, 73%, 54%);
+    --Light-Gray   : hsl(204, 43%, 93%);
+    --White-Trans  : hsla(240, 20%, 99%, 0.671);
+    --Grayish-Blue : hsl(218, 22%, 67%);
+    --white        : hsl(0, 0%, 100%);
+
+    /*   Font size   */ 
+    --sf-700   :        1.1rem;
+    --sf-400-h :        .91rem;
+    --sf-500-h :       1.14rem;
+    --sf-400-p :        .84rem;
+    --sf-500-p :       1rem;
+    --sf-footer:      .8125rem;
+
+    /* Padding  */
+    --pa:  1.6rem;
+    
+
+    /* Margin  */
+    --ma-h1-bottom:  1.5rem;
+    --ma-h2-bottom: 1.1rem;
+}
+
+@media (min-width: 52.225rem){
+    :root{
+        /* font size  */
+        --sf-700  :  1.66rem;
+        --sf-400-h:  1.31rem;
+        --sf-400-p:  1.05rem;
+        /* Padding  */
+
+        --pa:   2.5rem;
+    }
+}
+
+    /* Default  */
+
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--Light-Gray);
+    min-height: 100vh;
+    display:grid;
+    place-content: center;
+    padding: 6rem 0;
+}
+
+                    /* ==========Main Style ========== */
+
+main{
+    display: block;
+    margin:  0 2rem;
+    border-radius: 6px;
+    box-shadow: 2px 3px 5px 3px hsl(200, 7%, 75%) ;
+}
+
+    /*  Header  */
+
+    .header{
+        background-color:var(--white) ;
+        border-radius: 6px 6px 0 0;
+        padding: var(--pa);
+    }
+
+    .header h1{
+        color: var(--Cyan);
+        font-size:var(--sf-700);
+        font-weight:700;
+        margin-top: 10px;
+        margin-bottom:var(--ma-h1-bottom) ;
+        letter-spacing: 1px;
+    }
+
+    .header h2{
+        color: var(--Bright-Yello);
+        font-size: var(--sf-400-h);
+        line-height: 20px;
+        margin-bottom:var(--ma-h2-bottom) ;
+        max-width: 270px;
+    }
+
+    .header p{
+        color: var(--Grayish-Blue);
+        font-size: var(--sf-400-p);
+        font-weight: 400;
+        line-height: 1.7rem;
+        max-width: 260px;
+    }
+
+    /* Main  */
+
+    .main{
+        background-color:var(--Cyan);
+        padding: var(--pa);
+        color: var(--Light-Gray);
+    }
+
+    .main h2{
+        font-size:var(--sf-500-h);
+        font-weight: 500;
+        margin-bottom: var(--ma-h2-bottom);
+    }
+
+    .price{
+        display: flex;
+        align-items:center;
+        margin-bottom: .6rem;
+    }
+
+    .price span{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    .price p {
+        font-size: var(--sf-500-p);
+        font-weight: 300;
+        color:var(--White-Trans);
+        padding-left:12px  ;
+    }
+
+    .description{
+        font-size: var(--sf-500-p);
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+    
+    .main button{
+        background-color: var(--Bright-Yello);
+        color: var(--Light-Gray);
+        border: var(--Bright-Yello);
+        font-size: var(--sf-500-p);
+        font-weight:500 ;
+        padding: 16px 16px 14px 16px;
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 4px 3px 6px 6px  hsla(179, 98%, 23%, 0.363);
+        transition: all .3s;
+    }
+
+    .main button:hover{
+        cursor: pointer;
+        opacity: .7;
+    }
+
+    /* footer */
+
+    .footer{
+        background-color: var(--Light-Cyan);
+        padding: var(--pa);
+        border-radius: 0 0 6px 6px;
+        color:var(--Light-Gray);
+    }
+
+    .footer h2{
+        font-size: var(--sf-500-h);
+        font-weight: 500;
+        margin-bottom: var(--ma-h2-bottom);
+    }
+
+    li{
+        font-size: var(--sf-400-p);
+        font-weight: 400;
+        color: var(--White-Trans);
+        margin-bottom: 8px;
+    }
+                     /* ============Footer ============ */
+
+.attribution { 
+    font-size:var(--sf-footer);
+    color:var(--Cyan);
+    text-align: center; 
+    margin-top: 1.250rem ;
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover{
+    cursor: pointer;
+    text-decoration: underline var(--Light-Cyan);
+}
+
+                    /* ==========Media Queries ========== */
+
+@media (min-width:52.225rem){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
+    }
+    /* Header  */
+
+    .header{
+        grid-column: 1 / 3 ;
+    }
+
+    .header h2{
+        max-width: 500px;
+    }
+
+    .header p{
+        max-width: 600px;
+    }
+}
