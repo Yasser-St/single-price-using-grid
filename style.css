@@ -46,7 +46,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Karla', sans-serif;
+    font-family: 'Karla', sans-serif;  
 }
 
 li{
@@ -111,7 +111,7 @@ main{
 
     .main{
         background-color:var(--Cyan);
-        padding: var(--pa);
+        padding: var(--pa) var(--pa) 2.6rem var(--pa);
         color: var(--Light-Gray);
     }
 
@@ -124,35 +124,35 @@ main{
     .price{
         display: flex;
         align-items:center;
-        margin-bottom: .6rem;
+        margin-bottom: .4rem;
     }
 
     .price span{
         font-weight: 700;
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     .price p {
         font-size: var(--sf-500-p);
         font-weight: 300;
         color:var(--White-Trans);
-        padding-left:12px  ;
+        margin-left:12px  ;
     }
 
     .description{
         font-size: var(--sf-500-p);
         font-weight: 300;
-        margin-bottom: 2rem;
+        margin-bottom: 2.7rem;
     }
     
     .main button{
         background-color: var(--Bright-Yello);
         color: var(--Light-Gray);
-        border: var(--Bright-Yello);
+        border: none;
         font-size: var(--sf-500-p);
         font-weight:500 ;
-        padding: 16px 16px 14px 16px;
         width: 100%;
+        padding: 16px 30px 14px 30px;
         border-radius: 6px;
         box-shadow: 4px 3px 6px 6px  hsla(179, 98%, 23%, 0.363);
         transition: all .3s;
@@ -229,6 +229,10 @@ main{
         border-radius: 0 0 0 6px;
     }
 
+    .description{
+        margin-bottom: 2.9rem;
+    }
+
     /* Footer */
     .footer{
 
@@ -238,6 +242,6 @@ main{
 
     li{
         font-size: var(--sf-400-p-);
-        margin-bottom:5px ;
+        margin-bottom:4.1px ;
     }
 }
